@@ -3,13 +3,20 @@ services:
   web:
     image: todo-app
     restart: always
-    build: .
+    build:
+      context: ./app
     command: "node server.js"
     ports:
       - "5000:5000"
     depends_on:
       - "mongo"
-  mongo: 
+  nginx:
+    restart: always
+    build:
+      context: ./nginx
+    ports:
+      - "8000:8000"
+  mongo:
     image: "mongo"
-    ports: 
+    ports:
       - "27017:27017"
