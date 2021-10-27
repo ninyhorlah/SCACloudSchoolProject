@@ -34,9 +34,9 @@ app.patch('/todo/:id', (req, res) => {
 
 const mongoose = require('mongoose');
 const ToDo = require('./toDoModel.js').ToDo;
-const DB_URI = 'mongodb://mongo:27017/toDoApp';
+const DB_URI = 'mongodb+srv://dbEsther:ninyhorlah@sca-cluster.wu082.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
 
-mongoose.connect(DB_URI).then(() => {
+mongoose.connect(DB_URI, {useNewUrlParser: true, useUnifiedTopology: true}).then(() => {
   console.log('Listening on port: ' + PORT);
   app.listen(PORT);
 });
