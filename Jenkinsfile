@@ -7,6 +7,7 @@ pipeline {
     stage("build"){
       steps {
         console.log("Building the application...")
+        console.log("another build...")
       }
     }
     
