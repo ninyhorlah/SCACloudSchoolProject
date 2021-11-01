@@ -6,20 +6,19 @@ pipeline {
     
     stage("build"){
       steps {
-        console.log("Building the application...")
-        console.log("another build...")
+        echo("Building the application...")
       }
     }
     
     stage("test"){
       steps {
-        console.log("Testing the application...")
+        echo("Building the application...")
       }
     }
     
     stage("deploy"){
       steps {
-        console.log("Deploying the application...")
+        echo("Building the application...")
       }
     }
     
