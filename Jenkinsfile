@@ -6,19 +6,19 @@ pipeline {
     
     stage("build"){
       steps {
-        echo "Building the application..."
+        console.log("Building the application...")
       }
     }
     
     stage("test"){
       steps {
-        echo "Testing the application..."
+        console.log("Testing the application...")
       }
     }
     
     stage("deploy"){
       steps {
-        echo "Deploying the application..."
+        console.log("Deploying the application...")
       }
     }
     
